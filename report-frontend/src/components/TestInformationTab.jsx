@@ -202,6 +202,7 @@ const TestInformationTab = ({ register, errors, setActiveTab, isValid, trigger, 
           style={{ color: 'var(--dark-gray)', borderColor: 'var(--medium-gray)' }}
           {...register("nimhansResult")}
         />
+      </div>
       {/* Navigation Buttons */}
       <div className="flex justify-between">
         <button
