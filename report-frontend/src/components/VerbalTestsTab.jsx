@@ -546,14 +546,7 @@ const VerbalTestsTab = ({
                   ★ Average VIQ: {averageIQ}
                 </p>
               )}
-              {totalVerbalRawScore > 0 && (
-                <p
-                  className="text-lg font-semibold"
-                  style={{ color: "var(--dark-gray)" }}
-                >
-                  Total Verbal Raw Score: {totalVerbalRawScore.toFixed(2)}
-                </p>
-              )}
+              {/* Req #6A: Total Verbal Raw Score hidden — only PQ and Total IQ should be shown */}
               {/* New: Total Verbal TQ Score */}
               {totalVerbalTQScore > 0 && (
                 <p

@@ -597,8 +597,9 @@
         </li>
       </ul>
       <p>
-        On Schonell’s Reading test, «his_her» reading age was found to be 1.
-        This score is <b>below</b> than «his_her» chronological age (10).
+        <!-- Req #5A: Fixed reading age to use dynamic placeholders instead of hardcoded values -->
+        On Schonell's Reading test, «his_her» reading age was found to be «reading_age».
+        This score is <b>«below_than»</b> than «his_her» chronological age («Age»).
         <b>This discrepancy shows no difficulty in reading skills.</b>
       </p>
 
@@ -608,13 +609,16 @@
         </li>
       </ul>
       <p>
-        On Schonell’s spelling test «his_her» Spelling age was calculated is 2.
-        This score is <b>above</b> than «his_her» chronological age (10).
+        <!-- Req #5A: Fixed spelling age to use dynamic placeholders instead of hardcoded values -->
+        On Schonell's spelling test «his_her» Spelling age was calculated is «Spelling_age».
+        This score is <b>«below_than1»</b> than «his_her» chronological age («Age»).
         <b>This discrepancy shows no difficulty in spelling skills.</b>
       </p>
     </div>
 
-    <div class="page">
+    <!-- Req #5C: NIMHANS section only renders when «NIMHANS_Result» placeholder is filled.
+         Leave «NIMHANS_Result» empty in the form to skip this page entirely. -->
+    <div class="page" id="nimhans-section" style="display: «NIMHANS_Display»">
       <h4>
         <b><u>NIMHANS SLD Index - Arithmetic test</u></b>
       </h4>
@@ -625,8 +629,7 @@
         level of all four math operations. At the end child shall attempt
         fractions and all operations of fractions.
         <span class="highlight"
-          >«Name» has difficulty with basic division and graded level of all
-          four math operations and all fraction operations.</span
+          >«NIMHANS_Result»</span
         >
       </p>
 

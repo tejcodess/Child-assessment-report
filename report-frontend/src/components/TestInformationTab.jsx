@@ -136,8 +136,17 @@ const TestInformationTab = ({ register, errors, setActiveTab, isValid, trigger, 
             await trigger('readingAge');
           }}
         />
-        <p className="text-sm mt-1" style={{ color: 'var(--text-gray)' }}>Below than</p>{" "}
-        {/* Added text below Reading Age */}
+        {/* Req #5A: Below/Above selector for reading age comparison */}
+        <select
+          className="block w-full px-4 py-3 mt-2 text-base text-gray-900 border rounded-lg"
+          style={{ color: 'var(--dark-gray)', borderColor: 'var(--medium-gray)' }}
+          {...register("belowReading")}
+          onChange={(e) => setValue('belowReading', e.target.value)}
+        >
+          <option value="below">Below chronological age</option>
+          <option value="above">Above chronological age</option>
+          <option value="at par with">At par with chronological age</option>
+        </select>
       </div>
 
       {/* Spelling Age */}
@@ -165,9 +174,34 @@ const TestInformationTab = ({ register, errors, setActiveTab, isValid, trigger, 
             await trigger('spellingAge');
           }}
         />
-        <p className="text-sm mt-1" style={{ color: 'var(--text-gray)' }}>Below than 1</p>{" "}
-        {/* Added text below Spelling Age */}
+        {/* Req #5A: Below/Above selector for spelling age comparison */}
+        <select
+          className="block w-full px-4 py-3 mt-2 text-base text-gray-900 border rounded-lg"
+          style={{ color: 'var(--dark-gray)', borderColor: 'var(--medium-gray)' }}
+          {...register("aboveSpelling")}
+          onChange={(e) => setValue('aboveSpelling', e.target.value)}
+        >
+          <option value="below">Below chronological age</option>
+          <option value="above">Above chronological age</option>
+          <option value="at par with">At par with chronological age</option>
+        </select>
       </div>
+
+      {/* Req #5C: Optional NIMHANS field — leave blank to hide the NIMHANS page from report */}
+      <div className="flex flex-col">
+        <label className="text-base font-medium" style={{ color: 'var(--text-gray)' }}>
+          NIMHANS Arithmetic Result
+          <span className="text-xs ml-2 font-normal" style={{ color: 'var(--text-gray)' }}>
+            (optional — leave blank to exclude from report)
+          </span>
+        </label>
+        <textarea
+          rows={3}
+          placeholder="e.g. has difficulty with basic division and fractions..."
+          className="block w-full px-4 py-3 mt-2 text-base text-gray-900 border rounded-lg resize-none"
+          style={{ color: 'var(--dark-gray)', borderColor: 'var(--medium-gray)' }}
+          {...register("nimhansResult")}
+        />
       {/* Navigation Buttons */}
       <div className="flex justify-between">
         <button

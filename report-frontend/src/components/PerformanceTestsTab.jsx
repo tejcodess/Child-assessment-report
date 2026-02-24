@@ -366,12 +366,7 @@ const PerformanceTestsTab = ({ register, errors, setActiveTab, getValues, isVali
         >
           <h3 className="text-xl font-bold mb-4" style={{ color: 'var(--dark-gray)' }}>Performance Summary Scores</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {/* Total Performance Raw Score */}
-            {totalPerformanceRawScore > 0 && (
-              <p className="text-lg font-semibold" style={{ color: 'var(--dark-gray)' }}>
-                Total Performance Raw Score: {totalPerformanceRawScore.toFixed(2)}
-              </p>
-            )}
+            {/* Req #6A: Total Performance Raw Score hidden — only PQ and Total IQ should be shown */}
             {/* New: Average PIQ */}
             {averageIQ && (
               <p className="text-lg font-semibold" style={{ color: 'var(--dark-gray)' }}>

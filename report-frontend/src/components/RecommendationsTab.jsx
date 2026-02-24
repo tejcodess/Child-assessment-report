@@ -486,6 +486,10 @@ const RecommendationsTab = ({
     formData.append("otherTest", values.otherTest);
     formData.append("readingAge", values.readingAge);
     formData.append("spellingAge", values.spellingAge);
+    // Req #5A/5C: below/above selectors and optional NIMHANS result
+    formData.append("belowReading", values.belowReading || "below");
+    formData.append("aboveSpelling", values.aboveSpelling || "below");
+    formData.append("nimhansResult", values.nimhansResult || "");
     formData.append("he_she", pronouns.he_she);
     formData.append("him_her", pronouns.him_her);
     formData.append("his_her", pronouns.his_her);
@@ -574,6 +578,10 @@ const RecommendationsTab = ({
     formData.append("otherTest", values.otherTest);
     formData.append("readingAge", values.readingAge);
     formData.append("spellingAge", values.spellingAge);
+    // Req #5A/5C: below/above selectors and optional NIMHANS result
+    formData.append("belowReading", values.belowReading || "below");
+    formData.append("aboveSpelling", values.aboveSpelling || "below");
+    formData.append("nimhansResult", values.nimhansResult || "");
     formData.append("he_she", pronouns.he_she);
     formData.append("him_her", pronouns.him_her);
     formData.append("his_her", pronouns.his_her);
@@ -644,6 +652,10 @@ const RecommendationsTab = ({
     formData.append("otherTest", values.otherTest);
     formData.append("readingAge", values.readingAge);
     formData.append("spellingAge", values.spellingAge);
+    // Req #5A/5C: below/above selectors and optional NIMHANS result
+    formData.append("belowReading", values.belowReading || "below");
+    formData.append("aboveSpelling", values.aboveSpelling || "below");
+    formData.append("nimhansResult", values.nimhansResult || "");
     formData.append("he_she", pronouns.he_she);
     formData.append("him_her", pronouns.him_her);
     formData.append("his_her", pronouns.his_her);
